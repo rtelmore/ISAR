@@ -19,7 +19,7 @@ A data frame with 87 rows and 9 variables:
 }
 }
 \source{
-\url{https://www.augusta.com/masters/historic/leaderboards/2019}
+\url{https://www.sportingnews.com/us/golf/news/masters-leaderboard-2019-live-scores-results-sunday/n1j77sci339r1f60hm3e1ei17}
 }
 \usage{
 masters
