@@ -11,7 +11,7 @@ install.packages("ISAR")
 The development version from GitHub:
 ```r
 install.packages("remotes")
-remotes::install_github("rtelmore/ballr")
+remotes::install_github("rtelmore/ISAR")
 ```
 
 ## Website

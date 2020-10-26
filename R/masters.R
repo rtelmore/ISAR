@@ -14,5 +14,5 @@
 #'   \item{round_4}{number of strokes from the fourth round}
 #'   \item{total}{total strokes from all rounds}
 #' }
-#' @source \url{https://www.augusta.com/masters/historic/leaderboards/2019}
+#' @source \url{https://www.sportingnews.com/us/golf/news/masters-leaderboard-2019-live-scores-results-sunday/n1j77sci339r1f60hm3e1ei17}
 "masters"
