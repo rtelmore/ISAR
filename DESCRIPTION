@@ -4,7 +4,7 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Authors@R: c(
     person("Ryan", "Elmore", email = "rtelmore@gmail.com", role = c("cre", "aut")),
-    person("Andrew", "Urbaczewski", email = "tbd@gmail.com", role = "ctb"))
+    person("Andrew", "Urbaczewski", email = "tbd@gmail.com", role = "aut"))
 Maintainer: The package maintainer <rtelmore@gmail.com>
 Description: This is a data package to supplement the textbook *Introduction to Sports Analytics using R. The package contains XXX datasets. 
 License: MIT + file LICENSE
