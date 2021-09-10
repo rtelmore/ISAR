@@ -2,17 +2,19 @@
 #'
 #' A dataset containing the NBA Four Factor table on nba.com
 #'
-#' @format A data frame with 1832 rows and 11 variables:
+#' @format A data frame with 2160 rows and 11 variables:
 #' \describe{
-#'   \item{pos}{finishing position for a player}
-#'   \item{player_name}{name of the golfer}
-#'   \item{nationality}{nationality of the golfer}
-#'   \item{score}{final score relative to par}
-#'   \item{round_1}{number of strokes from the first round}
-#'   \item{round_2}{number of strokes from the second round}
-#'   \item{round_3}{number of strokes from the third round}
-#'   \item{round_4}{number of strokes from the fourth round}
-#'   \item{total}{total strokes from all rounds}
+#'   \item{idGame}{Game ID on nba.com}
+#'   \item{slugTeam}{Team abbreviation}
+#'   \item{idTeam}{Team ID on nba.com}
+#'   \item{pctEFGOpponent}{Effective field goal percentage of opponent}
+#'   \item{pctTOVOpponent}{Turnover percentage of opponent}
+#'   \item{pctOREBOpponent}{Offensive rebound percentage of opponent}
+#'   \item{teamName}{Team Mascot}
+#'   \item{cityTeam}{City of slugTeam}
+#'   \item{minExact}{Total minutes played}
+#'   \item{rateFTA}{Free throw rate of slugTeam}
+#'   \item{rateFTAOpponent}{Free throw rate of opponent}
 #' }
 #' @source \url{hhttp://asbcllc.com/nbastatR/reference/box_scores.html}
-"nba_ff_2021"
+"nba_ff_team_2021"
