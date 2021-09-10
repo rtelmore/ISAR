@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ISAR</title>
+<title>2021 NBA Game Logs for the 2020-21 Season — nba_games_2021 • ISAR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="2021 NBA Game Logs for the 2020-21 Season — nba_games_2021" />
+<meta property="og:description" content="A dataset containing the NBA Games table on nba.com" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,60 +106,78 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>2021 NBA Game Logs for the 2020-21 Season</h1>
+    <small class="dont-index">Source: <a href='https://github.com/rtelmore/ISAR/blob/master/R/nba_games_2021.R'><code>R/nba_games_2021.R</code></a></small>
+    <div class="hidden name"><code>nba_games_2021.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>A dataset containing the NBA Games table on nba.com</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='va'>nba_games_2021</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="masters.html">masters</a></code> </p>
-        </td>
-        <td><p>2019 Masters Tournament Scores</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nba_adv_team_2021.html">nba_adv_team_2021</a></code> </p>
-        </td>
-        <td><p>2021 NBA Advanced Statistics (Team) for the 2020-21 Season</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nba_ff_team_2021.html">nba_ff_team_2021</a></code> </p>
-        </td>
-        <td><p>2021 NBA Four Factors (Team) for the 2020-21 Season</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nba_games_2021.html">nba_games_2021</a></code> </p>
-        </td>
-        <td><p>2021 NBA Game Logs for the 2020-21 Season</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame with 1832 rows and 47 variables:</p><dl>
+  <dt>yearSeason</dt><dd><p>Season in which the game was played (YYYY)</p></dd>
+  <dt>slugSeason</dt><dd><p>Season in which the game was played (YYYY-YY)</p></dd>
+  <dt>slugLeague</dt><dd><p>Always given as NBA</p></dd>
+  <dt>typeSeason</dt><dd><p>Regular season data</p></dd>
+  <dt>dateGame</dt><dd><p>Date in YYYY-MM-DD</p></dd>
+  <dt>idGame</dt><dd><p>Game ID on nba.com</p></dd>
+  <dt>numberGameTeamSeason</dt><dd><p>slugTeam game number in the season</p></dd>
+  <dt>nameTeam</dt><dd><p>Full team name</p></dd>
+  <dt>idTeam</dt><dd><p>Team ID on nba.com</p></dd>
+  <dt>isB2B</dt><dd><p>Logical for back-to-back game</p></dd>
+  <dt>isB2BFirst</dt><dd><p>Logical for first game of back-to-back game</p></dd>
+  <dt>isB2BSecond</dt><dd><p>Logical for second game of back-to-back game</p></dd>
+  <dt>locationGame</dt><dd><p>Home (H) or Away (A)</p></dd>
+  <dt>slugMatchup</dt><dd><p>Team One vs. Team Two</p></dd>
+  <dt>slugTeam</dt><dd><p>Team abbreviation</p></dd>
+  <dt>countDaysRestTeam</dt><dd><p>Days between previous game and this game</p></dd>
+  <dt>countDaysNextGameTeam</dt><dd><p>Days until next game</p></dd>
+  <dt>slugOpponent</dt><dd><p>Opponent abbreviation</p></dd>
+  <dt>slugTeamWinner</dt><dd><p>Team that won (abbreviation)</p></dd>
+  <dt>slugTeamLoser</dt><dd><p>Team that lost (abbreviation)</p></dd>
+  <dt>outcomeGame</dt><dd><p>Result for slugTeam (W or L)</p></dd>
+  <dt>isWin</dt><dd><p>Logical for slugTeam winning</p></dd>
+  <dt>fgmTeam</dt><dd><p>slugTeam field goals made</p></dd>
+  <dt>fgaTeam</dt><dd><p>slugTeam field goal attempts</p></dd>
+  <dt>pctFGTeam</dt><dd><p>slugTeam field goal percentage</p></dd>
+  <dt>fg3mTeam</dt><dd><p>slugTeam three point field goals made</p></dd>
+  <dt>fg3aTeam</dt><dd><p>slugTeam three point field goal attempts</p></dd>
+  <dt>pctFG3Team</dt><dd><p>slugTeam three point field goal percentage</p></dd>
+  <dt>pctFTTeam</dt><dd><p>slugTeam free throw percentage</p></dd>
+  <dt>hasVideo</dt><dd><p>Logical if game video exists</p></dd>
+  <dt>fg2mTeam</dt><dd><p>slugTeam two point field goals made</p></dd>
+  <dt>fg2aTeam</dt><dd><p>slugTeam two point field goal attempts</p></dd>
+  <dt>pctFG2Team</dt><dd><p>slugTeam two point field goal percentage</p></dd>
+  <dt>minutesTeam</dt><dd><p>Total minutes played</p></dd>
+  <dt>ftmTeam</dt><dd><p>slugTeam free throws made</p></dd>
+  <dt>ftaTeam</dt><dd><p>slugTeam free throw attempts</p></dd>
+  <dt>orebTeam</dt><dd><p>slugTeam offensive rebounds</p></dd>
+  <dt>drebTeam</dt><dd><p>slugTeam defensive rebounds</p></dd>
+  <dt>trebTeam</dt><dd><p>slugTeam total rebounds</p></dd>
+  <dt>astTeam</dt><dd><p>slugTeam total assists</p></dd>
+  <dt>stlTeam</dt><dd><p>slugTeam total steals</p></dd>
+  <dt>blkTeam</dt><dd><p>slugTeam total blocks</p></dd>
+  <dt>tovTeam</dt><dd><p>slugTeam total turnovers</p></dd>
+  <dt>pfTeam</dt><dd><p>slugTeam total personal fouls</p></dd>
+  <dt>ptsTeam</dt><dd><p>slugTeam total points scored</p></dd>
+  <dt>plusminusTeam</dt><dd><p>Margin of game as slugTeam score minus slugOpponent score</p></dd>
+  <dt>urlTeamSeasonLogo</dt><dd><p>url of slugTeam logo</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='http://asbcllc.com/nbastatR/reference/game_logs.html'>http://asbcllc.com/nbastatR/reference/game_logs.html</a></p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

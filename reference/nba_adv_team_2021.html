@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ISAR</title>
+<title>2021 NBA Advanced Statistics (Team) for the 2020-21 Season — nba_adv_team_2021 • ISAR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="2021 NBA Advanced Statistics (Team) for the 2020-21 Season — nba_adv_team_2021" />
+<meta property="og:description" content="A dataset containing the NBA Four Factor table on nba.com" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,60 +106,60 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>2021 NBA Advanced Statistics (Team) for the 2020-21 Season</h1>
+    <small class="dont-index">Source: <a href='https://github.com/rtelmore/ISAR/blob/master/R/nba_advanced_team_2021.R'><code>R/nba_advanced_team_2021.R</code></a></small>
+    <div class="hidden name"><code>nba_adv_team_2021.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>A dataset containing the NBA Four Factor table on nba.com</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='va'>nba_adv_team_2021</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="masters.html">masters</a></code> </p>
-        </td>
-        <td><p>2019 Masters Tournament Scores</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nba_adv_team_2021.html">nba_adv_team_2021</a></code> </p>
-        </td>
-        <td><p>2021 NBA Advanced Statistics (Team) for the 2020-21 Season</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nba_ff_team_2021.html">nba_ff_team_2021</a></code> </p>
-        </td>
-        <td><p>2021 NBA Four Factors (Team) for the 2020-21 Season</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nba_games_2021.html">nba_games_2021</a></code> </p>
-        </td>
-        <td><p>2021 NBA Game Logs for the 2020-21 Season</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame with 2160 rows and 29 variables:</p><dl>
+  <dt>idGame</dt><dd><p>Game ID on nba.com</p></dd>
+  <dt>slugTeam</dt><dd><p>Team abbreviation</p></dd>
+  <dt>idTeam</dt><dd><p>Team ID on nba.com</p></dd>
+  <dt>pctAST</dt><dd><p>Assist percentage</p></dd>
+  <dt>pctOREB</dt><dd><p>Offensive rebound percentage</p></dd>
+  <dt>pctDREB</dt><dd><p>Defensive rebound percentage</p></dd>
+  <dt>pctTREB</dt><dd><p>Total rebound percentage</p></dd>
+  <dt>pctTOVE</dt><dd><p>Turnover percentage (one)</p></dd>
+  <dt>pctTOVTeam</dt><dd><p>Turnover percentage (two)</p></dd>
+  <dt>pctEFG</dt><dd><p>Effective field goal percentage</p></dd>
+  <dt>pctTS</dt><dd><p>True Shooting percentage</p></dd>
+  <dt>pctUSG</dt><dd><p>Usage metric</p></dd>
+  <dt>pctUSGE</dt><dd><p>Usage percentage</p></dd>
+  <dt>teamName</dt><dd><p>Team Mascot</p></dd>
+  <dt>cityTeam</dt><dd><p>City of slugTeam</p></dd>
+  <dt>minExact</dt><dd><p>Total minutes played</p></dd>
+  <dt>ortgE</dt><dd><p>offensive rating (effective ?)</p></dd>
+  <dt>ortg</dt><dd><p>offensive rating</p></dd>
+  <dt>drtgE</dt><dd><p>defensive rating (effective ?)</p></dd>
+  <dt>drtg</dt><dd><p>defensive rating</p></dd>
+  <dt>netrtgE</dt><dd><p>net rating (effective ?)</p></dd>
+  <dt>netrtg</dt><dd><p>net rating</p></dd>
+  <dt>ratioASTtoTOV</dt><dd><p>Assists to turnover ratio</p></dd>
+  <dt>ratioAST</dt><dd><p>Assist ratio</p></dd>
+  <dt>paceE</dt><dd><p>pace (effective ?)</p></dd>
+  <dt>pace</dt><dd><p>pace</p></dd>
+  <dt>pacePer40PACE_PER40</dt><dd><p>pace per forty minutes</p></dd>
+  <dt>possessions</dt><dd><p>team possessions in game</p></dd>
+  <dt>ratioPIE</dt><dd><p>Player impact estimate</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='hhttp://asbcllc.com/nbastatR/reference/box_scores.html'>hhttp://asbcllc.com/nbastatR/reference/box_scores.html</a></p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
