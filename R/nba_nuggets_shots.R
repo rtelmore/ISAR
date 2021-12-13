@@ -2,7 +2,7 @@
 #'
 #' A dataset containing seven seasons of Denver Nuggets shot data from NBA.com
 #'
-#' @format A data frame with 1832 rows and 47 variables:
+#' @format A data frame with 48029 rows and 27 variables:
 #' \describe{
 #'   \item{yearSeason}{Season in which the game was played (YYYY)}
 #'   \item{slugSeason}{Season in which the game was played (YYYY-YY)}

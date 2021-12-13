@@ -5,7 +5,7 @@
 \alias{nba_nuggets_shots}
 \title{2014/5 - 2020/21 Shot Data for the NBA's Denver Nuggets}
 \format{
-A data frame with 1832 rows and 47 variables:
+A data frame with 48029 rows and 27 variables:
 \describe{
   \item{yearSeason}{Season in which the game was played (YYYY)}
   \item{slugSeason}{Season in which the game was played (YYYY-YY)}
