@@ -1,5 +1,6 @@
 # ISAR
-R Package for Introduction to Sports Analytics using R
+R Package for Introduction to Sports Analytics using R by Ryan Elmore and Andrew
+Urbaczewski
 
 <!-- badges: start -->
   [![R build status](https://github.com/rtelmore/ISAR/workflows/R-CMD-check/badge.svg)](https://github.com/rtelmore/ISAR/actions)

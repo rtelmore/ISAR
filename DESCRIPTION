@@ -1,6 +1,6 @@
 Package: ISAR
 Type: Package
-Title: The R Package for the textbook Introduction to Sports Analytics using R
+Title: The R Package for Introduction to Sports Analytics using R
 Version: 0.1.0
 Authors@R: c(
     person("Ryan", "Elmore", email = "rtelmore@gmail.com", role = c("cre", "aut")),
