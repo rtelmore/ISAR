@@ -12,21 +12,21 @@ A data frame with 3676 rows and 34 variables:
   \item{player.id}{plyaer ID}
   \item{hole_par}{par across all holes played by the player}
   \item{strokes}{strokes taken on all holes played by the player}
-  \item{hole_DKP}{initial of first name and complete last name of player}
-  \item{hole_FDP}{initial of first name and complete last name of player}
-  \item{hole_SDP}{initial of first name and complete last name of player}
-  \item{streak_DKP}{initial of first name and complete last name of player}
-  \item{streak_FDP}{initial of first name and complete last name of player}
-  \item{streak_SDP}{initial of first name and complete last name of player}
+  \item{hole_DKP}{Draftkings points on holes}
+  \item{hole_FDP}{Fanduel points on the holes}
+  \item{hole_SDP}{Showdown points on the holes}
+  \item{streak_DKP}{Draftkings points on streaks}
+  \item{streak_FDP}{Fanduel points on streaks}
+  \item{streak_SDP}{Showdown points on streaks}
   \item{n_rounds}{number of rounds played}
   \item{made_cut}{player made the cut or not}
   \item{pos}{finishing position of player}
-  \item{finish_DKP}{initial of first name and complete last name of player}
-  \item{finish_FDP}{initial of first name and complete last name of player}
-  \item{finish_SDP}{initial of first name and complete last name of player}
-  \item{total_DKP}{tournament ID}
-  \item{total_FDP}{plyaer ID}
-  \item{total_SDP}{par across all holes played by the player}
+  \item{finish_DKP}{Draftkings points on the finishing position}
+  \item{finish_FDP}{Fanduel points on the finishing position}
+  \item{finish_SDP}{Showdown points on the finishing position}
+  \item{total_DKP}{total Draftkings points for the tournament}
+  \item{total_FDP}{total Fanduel points for the tournament}
+  \item{total_SDP}{total Showdown points for the tournament}
   \item{player}{player full name}
   \item{tournament.name}{tournament full name}
   \item{course}{course name}
