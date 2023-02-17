@@ -12,11 +12,11 @@
 #'   \item{mp}{Matches played}
 #'   \item{starts}{Number of matches in which player started the game}
 #'   \item{min}{Total minutes played in the season}
-#'   \item{xGp90}{Expected goals per 90 minutes played}
-#'   \item{xAp90}{Expected assists per 90 minutes played}
-#'   \item{xGxAp90}{Expected goals plus assists per 90 minutes played}
-#'   \item{npxGp90}{Expected goals minus penalty goals per 90 minutes played}
-#'   \item{npxGxAp90}{xpected goals plus assists minus penalty goals per 90 minutes played}
+#'   \item{xGp90}{Expected goals per ninety minutes}
+#'   \item{xAp90}{Expected assists per ninety minutes}
+#'   \item{xGxAp90}{Expected goals plus assists per ninety minutes}
+#'   \item{npxGp90}{Expected goals minus penalty goals per ninety minutes}
+#'   \item{npxGxAp90}{Expected goals plus assists minus penalty goals per ninety minutes}
 #' }
 #' @source \url{https://fbref.com/en/comps/182/stats/NWSL-Stats}
 "nwsl_player_stats"
