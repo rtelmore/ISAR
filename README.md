@@ -21,5 +21,5 @@ remotes::install_github("rtelmore/ISAR")
 
 ## Website
 
-The ISAR package website is hosted at [datacolorado.com/ISAR](https://datacolorado.com/r/ISAR/).
+The ISAR package website is hosted at [datacolorado.com/r/ISAR](https://datacolorado.com/r/ISAR/).
 
