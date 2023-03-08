@@ -4,55 +4,56 @@
 #'
 #' @format A data frame with 196 rows and 50 variables:
 #' \describe{
-#'   \item{person_id}{Season in which the game was played (YYYY)}
-#'   \item{person_full_name}{Season in which the game was played (YYYY-YY)}
-#'   \item{season}{Always given as NBA}
-#'   \item{season_start}{Regular season data}
-#'   \item{stat_assists}{Date in YYYY-MM-DD}
-#'   \item{stat_goals}{Game ID on nba.com}
-#'   \item{stat_pim}{slugTeam game number in the season}
-#'   \item{stat_games}{Full team name}
-#'   \item{stat_penalty_minutes}{Team ID on nba.com}
-#'   \item{stat_plus_minus}{Logical for back-to-back game}
-#'   \item{stat_points}{Logical for first game of back-to-back game}
-#'   \item{stat_power_play_goals}{Logical for second game of back-to-back game}
-#'   \item{stat_game_winning_goals}{Home (H) or Away (A)}
-#'   \item{stat_short_handed_goals}{Team One vs. Team Two}
-#'   \item{stat_shots}{Team abbreviation}
-#'   \item{stat_shot_pct}{Days between previous game and this game}
-#'   \item{stat_time_on_ice}{Days until next game}
-#'   \item{stat_hits}{Opponent abbreviation}
-#'   \item{stat_power_play_points}{Team that won (abbreviation)}
-#'   \item{stat_power_play_time_on_ice}{Team that lost (abbreviation)}
-#'   \item{stat_even_time_on_ice}{Result for slugTeam (W or L)}
-#'   \item{stat_face_off_pct}{Logical for slugTeam winning}
-#'   \item{stat_over_time_goals}{slugTeam field goals made}
-#'   \item{stat_short_handed_points}{slugTeam field goal attempts}
-#'   \item{stat_blocked}{slugTeam field goal percentage}
-#'   \item{stat_shifts}{slugTeam three point field goals made}
-#'   \item{stat_save_percentage}{slugTeam three point field goal attempts}
-#'   \item{stat_goal_against_average}{slugTeam three point field goal percentage}
-#'   \item{stat_ot}{slugTeam free throw percentage}
-#'   \item{stat_shutouts}{Logical if game video exists}
-#'   \item{stat_ties}{slugTeam two point field goals made}
-#'   \item{stat_wins}{slugTeam two point field goal attempts}
-#'   \item{stat_losses}{slugTeam two point field goal percentage}
-#'   \item{stat_saves}{Total minutes played}
-#'   \item{stat_power_play_saves}{slugTeam free throws made}
-#'   \item{stat_short_handed_saves}{slugTeam free throw attempts}
-#'   \item{stat_even_saves}{slugTeam offensive rebounds}
-#'   \item{stat_short_handed_shots}{slugTeam defensive rebounds}
-#'   \item{stat_even_shots}{slugTeam total rebounds}
-#'   \item{stat_power_play_shots}{slugTeam total assists}
-#'   \item{stat_games_started}{slugTeam total steals}
-#'   \item{stat_shots_against}{slugTeam total blocks}
-#'   \item{stat_goals_against}{slugTeam total turnovers}
-#'   \item{stat_power_play_save_percentage}{slugTeam total personal fouls}
-#'   \item{stat_short_handed_save_percentage}{slugTeam total points scored}
-#'   \item{stat_even_strength_save_percentage}{Margin of game as slugTeam score minus slugOpponent score}
-#'   \item{team_name}{url of slugTeam logo}
-#'   \item{team_link}{Margin of game as slugTeam score minus slugOpponent score}
-#'   \item{team_id}{url of slugTeam logo}
+#'   \item{person_id}{NHL API Player ID}
+#'   \item{person_full_name}{Player full name}
+#'   \item{season}{Season}
+#'   \item{season_start}{Season start}
+#'   \item{stat_assists}{Assists}
+#'   \item{stat_goals}{Goals}
+#'   \item{stat_pim}{Penalty minutes}
+#'   \item{stat_games}{Games played}
+#'   \item{stat_penalty_minutes}{Penalty minutes}
+#'   \item{stat_plus_minus}{Plus-minus value}
+#'   \item{stat_points}{Points }
+#'   \item{stat_power_play_goals}{Power play goals}
+#'   \item{stat_game_winning_goals}{Game winning goals}
+#'   \item{stat_short_handed_goals}{Short handed goals}
+#'   \item{stat_shots}{Shots}
+#'   \item{stat_shot_pct}{Shot percentage}
+#'   \item{stat_time_on_ice}{Time on ice}
+#'   \item{stat_hits}{Hits}
+#'   \item{stat_power_play_points}{Power play points}
+#'   \item{stat_power_play_time_on_ice}{Power play time on ice}
+#'   \item{stat_even_time_on_ice}{Even play time on ice}
+#'   \item{stat_face_off_pct}{Face off percentage}
+#'   \item{stat_over_time_goals}{Overtime goals}
+#'   \item{stat_short_handed_points}{Short handed points}
+#'   \item{stat_short_handed_time_on_ice}{Short handed time on ice}
+#'   \item{stat_blocked}{Blocks}
+#'   \item{stat_shifts}{Shifts}
+#'   \item{stat_save_percentage}{Save percentage}
+#'   \item{stat_goal_against_average}{Goals against average}
+#'   \item{stat_ot}{OT}
+#'   \item{stat_shutouts}{Shutouts}
+#'   \item{stat_ties}{Ties}
+#'   \item{stat_wins}{Wins}
+#'   \item{stat_losses}{Losses}
+#'   \item{stat_saves}{Saves}
+#'   \item{stat_power_play_saves}{Power play saves}
+#'   \item{stat_short_handed_saves}{Short handed saves}
+#'   \item{stat_even_saves}{Even play saves}
+#'   \item{stat_short_handed_shots}{Short handed shots}
+#'   \item{stat_even_shots}{Even play shots}
+#'   \item{stat_power_play_shots}{Power play shots}
+#'   \item{stat_games_started}{Games started}
+#'   \item{stat_shots_against}{Shots against}
+#'   \item{stat_goals_against}{Goals against}
+#'   \item{stat_power_play_save_percentage}{Power play save percentage}
+#'   \item{stat_short_handed_save_percentage}{Short handed save percentage}
+#'   \item{stat_even_strength_save_percentage}{Even strength save percentage}
+#'   \item{team_name}{Team name}
+#'   \item{team_link}{Team link}
+#'   \item{team_id}{Team ID}
 #' }
 #' @source \url{https://statsapi.web.nhl.com/api/v1}
 "avs_stats_2021"

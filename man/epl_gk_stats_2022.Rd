@@ -32,6 +32,7 @@ A data frame with 314 rows and 13 variables:
   \item{avg_pass_len}{Average pass length}
   \item{goal_kick_attempt}{Goal kick attempts}
   \item{gk_launch_percent}{Percentage of goals kicks launched}
+  \item{avg_gk_len}{Average goal kick length}
   \item{crosses_faced}{Number of crosses faced}
   \item{crosses_stopped}{Number of crosses stopped}
   \item{stop_percent}{Cross stop percentage}
