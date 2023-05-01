@@ -4,6 +4,7 @@ Urbaczewski
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/rtelmore/ISAR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rtelmore/ISAR/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/rtelmore/ISAR/workflows/R-CMD-check/badge.svg)](https://github.com/rtelmore/ISAR/actions)
 <!-- badges: end -->
   
 ## Installation Instructions
