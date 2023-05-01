@@ -16,5 +16,5 @@
 #'   \item{rateFTA}{Free throw rate of slugTeam}
 #'   \item{rateFTAOpponent}{Free throw rate of opponent}
 #' }
-#' @source \url{hhttp://asbcllc.com/nbastatR/reference/box_scores.html}
+#' @source \url{http://asbcllc.com/nbastatR/reference/box_scores.html}
 "nba_ff_team_2021"

@@ -39,7 +39,7 @@ A data frame with 2160 rows and 29 variables:
 }
 }
 \source{
-\url{hhttp://asbcllc.com/nbastatR/reference/box_scores.html}
+\url{http://asbcllc.com/nbastatR/reference/box_scores.html}
 }
 \usage{
 nba_adv_team_2021

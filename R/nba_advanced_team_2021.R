@@ -34,5 +34,5 @@
 #'   \item{possessions}{team possessions in game}
 #'   \item{ratioPIE}{Player impact estimate}
 #' }
-#' @source \url{hhttp://asbcllc.com/nbastatR/reference/box_scores.html}
+#' @source \url{http://asbcllc.com/nbastatR/reference/box_scores.html}
 "nba_adv_team_2021"
