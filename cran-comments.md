@@ -3,6 +3,8 @@
 0 errors | 0 warnings | 0 note
 
 ## Test environments
-* local OS X install, R 3.6.0
-* ubuntu (on travis-ci), R 3.6.2
-* ubuntu (on travis-ci), R dev r77674
+* Mac OS Latest (release)
+* Windows Latest (release)
+* Ubuntu Latest (release)
+* Ubuntu Latest (devel)
+* Ubuntu Latest (oldrel-1)
