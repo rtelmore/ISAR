@@ -3,7 +3,6 @@ R Package for Introduction to Sports Analytics using R by Ryan Elmore and Andrew
 Urbaczewski
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/rtelmore/ISAR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rtelmore/ISAR/actions/workflows/R-CMD-check.yaml)
 [![R-CMD-check](https://github.com/rtelmore/ISAR/workflows/R-CMD-check/badge.svg)](https://github.com/rtelmore/ISAR/actions)
 <!-- badges: end -->
   
