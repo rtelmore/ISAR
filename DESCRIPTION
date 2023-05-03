@@ -5,7 +5,7 @@ Version: 0.1.10
 Authors@R: c(
     person("Ryan", "Elmore", email = "Ryan.Elmore@du.edu", role = c("cre", "aut")),
     person("Andrew", "Urbaczewski", email = "Andrew.Urbaczewski@du.edu", role = "aut"))
-Maintainer: The package maintainer <rtelmore@gmail.com>
+Maintainer: Ryan Elmore <Ryan.Elmore@du.edu>
 Description: This is a data package to supplement the textbook *Introduction to Sports Analytics using R. The package contains XXX datasets. 
 License: MIT + file LICENSE
 Encoding: UTF-8
