@@ -13,5 +13,5 @@
 #'   \item{position_type}{position type}
 #'   \item{position_abbreviation}{another position abbreviation}
 #' }
-#' @source \url{https://statsapi.web.nhl.com/api/v1}
+#' @source \url{https://www.nhl.com/stats/}
 "avs_roster_2021"

@@ -60,7 +60,7 @@ A data frame with 196 rows and 50 variables:
 }
 }
 \source{
-\url{https://statsapi.web.nhl.com/api/v1}
+\url{https://www.nhl.com/stats/}
 }
 \usage{
 avs_stats_2021

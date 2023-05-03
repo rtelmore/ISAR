@@ -40,5 +40,5 @@
 #'   \item{team_link}{Team link}
 #'   \item{season}{Season}
 #' }
-#' @source \url{https://statsapi.web.nhl.com/api/v1}
+#' @source \url{https://www.nhl.com/stats/}
 "nhl_team_stats_2021"

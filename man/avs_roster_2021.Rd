@@ -18,7 +18,7 @@ A data frame with 28 rows and 8 variables:
 }
 }
 \source{
-\url{https://statsapi.web.nhl.com/api/v1}
+\url{https://www.nhl.com/stats/}
 }
 \usage{
 avs_roster_2021

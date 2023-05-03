@@ -45,7 +45,7 @@ A data frame with 32 rows and 35 variables:
 }
 }
 \source{
-\url{https://statsapi.web.nhl.com/api/v1}
+\url{https://www.nhl.com/stats/}
 }
 \usage{
 nhl_team_stats_2021

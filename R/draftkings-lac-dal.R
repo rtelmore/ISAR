@@ -15,5 +15,5 @@
 #'   \item{team_abbrev}{player team as an abbreviation}
 #'   \item{avg_points_per_game}{player average Draftkings points per game}
 #' }
-#' @source \url{https://www.draftkings.com}
+#' @source Draftkings Contest Page
 "dk_lac_dal"

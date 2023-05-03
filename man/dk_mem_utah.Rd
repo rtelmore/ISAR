@@ -19,7 +19,7 @@ A data frame with 68 rows and 9 variables:
 }
 }
 \source{
-\url{https://www.draftkings.com}
+Draftkings Contest Page
 }
 \usage{
 dk_mem_utah

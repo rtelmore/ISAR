@@ -55,5 +55,5 @@
 #'   \item{team_link}{Team link}
 #'   \item{team_id}{Team ID}
 #' }
-#' @source \url{https://statsapi.web.nhl.com/api/v1}
+#' @source \url{https://www.nhl.com/stats/}
 "avs_stats_2021"
