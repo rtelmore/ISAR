@@ -1,6 +1,6 @@
 # ISAR
 R Package for Introduction to Sports Analytics using R by Ryan Elmore and Andrew
-Urbaczewski
+Urbaczewski. The book should be released in 2024. 
 
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
