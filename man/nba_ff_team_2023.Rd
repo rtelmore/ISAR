@@ -12,7 +12,7 @@ A data frame with 2460 rows and 14 variables:
   \item{team_name}{Team name on nba.com}
   \item{team_abbreviation}{Team abbreviation on nba.com}
   \item{team_city}{Team city}
-  \item{mib}{Minutes in the game}
+  \item{min}{Minutes in the game}
   \item{efg_pct}{Effective field goal percentage}
   \item{fta_rate}{Free throw rate of team}
   \item{tm_tov_pct}{Turnover percentage of opponent}
