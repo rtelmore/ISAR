@@ -1,8 +1,8 @@
-#' 2014/5 - 2020/21 Shot Data for the NBA's Denver Nuggets
+#' 2014/5 - 2022/23 Shot Data for the NBA's Denver Nuggets
 #'
 #' A dataset containing seven seasons of Denver Nuggets shot data from NBA.com
 #'
-#' @format A data frame with 48029 rows and 27 variables:
+#' @format A data frame with 62196 rows and 27 variables:
 #' \describe{
 #'   \item{yearSeason}{Season in which the game was played (YYYY)}
 #'   \item{slugSeason}{Season in which the game was played (YYYY-YY)}
