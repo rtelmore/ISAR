@@ -3,8 +3,7 @@ Type: Package
 Title: Introduction to Sports Analytics using R (ISAR) Data
 Version: 0.1.11
 Authors@R: c(
-    person("Ryan", "Elmore", email = "Ryan.Elmore@du.edu", role = c("cre", "aut")),
-    person("Andrew", "Urbaczewski", email = "Andrew.Urbaczewski@du.edu", role = "aut"))
+    person("Ryan", "Elmore", email = "Ryan.Elmore@du.edu", role = c("cre", "aut")))
 Maintainer: Ryan Elmore <Ryan.Elmore@du.edu>
 Description: We provide data sets used in the forthcoming textbook "Introduction to Sports Analytics using R" by Elmore and Urbaczweski (2024). The package currently contains sixteen datasets and should be published in early 2024.  
 License: MIT + file LICENSE
