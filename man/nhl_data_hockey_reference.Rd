@@ -33,6 +33,7 @@ A data frame with 12375 rows and 49 variables:
   \item{hit}{Hits}
   \item{fow}{Face offs won}
   \item{fol}{Face offs lost}
+  \item{fo_percent}{Face off win percentage}
   \item{cf}{Corsi for }
   \item{ca}{Corsi against}
   \item{cf_percent}{Corsi for percent}
@@ -42,7 +43,7 @@ A data frame with 12375 rows and 49 variables:
   \item{ff_percent}{Fenwick for percent}
   \item{ff_percent_rel}{On-ice Fenwick for percent minus off-ice Fenwick for percent}
   \item{oi_sh_percent}{Team on-ice shooting percentage}
-  \item{of_sv_percent}{Team on-ice save percentage}
+  \item{oi_sv_percent}{Team on-ice save percentage}
   \item{pdo}{PDO}
   \item{o_zs_percent}{Offensive zone start percentage}
   \item{d_zs_percent}{Defensive zone start percentage}
