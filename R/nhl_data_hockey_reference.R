@@ -1,0 +1,56 @@
+#'  NHL Skater Statistics from Hockey Reference
+#'
+#' A dataset containing NHL Skater Statistics
+#'
+#' @format A data frame with 12375 rows and 49 variables:
+#' \describe{
+#'   \item{player}{Name}
+#'   \item{age}{Age}
+#'   \item{tm}{Team}
+#'   \item{pos}{Position}
+#'   \item{gp}{Games played}
+#'   \item{g}{Goals}
+#'   \item{a}{Assists}
+#'   \item{pts}{Goals plus Assists (Points)}
+#'   \item{x}{Plus Minus}
+#'   \item{pim}{Penalties in minutes}
+#'   \item{ps}{Point shares}
+#'   \item{ev}{Even strength goals}
+#'   \item{pp}{Power play goals}
+#'   \item{sh}{Short handed goals}
+#'   \item{gw}{Game winning goals}
+#'   \item{eva}{Even strength assists}
+#'   \item{ppa}{Power play assists}
+#'   \item{sha}{Short handed assists}
+#'   \item{s}{Shots on goal}
+#'   \item{s_percent}{Shooting percentage}
+#'   \item{toi}{Time on ice (minutes)}
+#'   \item{atoi}{Average time on ice}
+#'   \item{blk}{Blocks}
+#'   \item{hit}{Hits}
+#'   \item{fow}{Face offs won}
+#'   \item{fol}{Face offs lost}
+#'   \item{cf}{Corsi for }
+#'   \item{ca}{Corsi against}
+#'   \item{cf_percent}{Corsi for percent}
+#'   \item{cf_percent_rel}{On-ice Corsi for percent minus off-ice Corsi for percent}
+#'   \item{ff}{Fenwick for}
+#'   \item{fa}{Fenwick against}
+#'   \item{ff_percent}{Fenwick for percent}
+#'   \item{ff_percent_rel}{On-ice Fenwick for percent minus off-ice Fenwick for percent}
+#'   \item{oi_sh_percent}{Team on-ice shooting percentage}
+#'   \item{of_sv_percent}{Team on-ice save percentage}
+#'   \item{pdo}{PDO}
+#'   \item{o_zs_percent}{Offensive zone start percentage}
+#'   \item{d_zs_percent}{Defensive zone start percentage}
+#'   \item{toi_60}{Time on ice per 60 minutes}
+#'   \item{toi_ev}{Time on ice per 60 minutes at even strength}
+#'   \item{tk}{Takeaways}
+#'   \item{gv}{Giveaways}
+#'   \item{s_att}{Total shot attempts in all situations}
+#'   \item{thru_percent}{Percentage of shots taken that go on net}
+#'   \item{season}{Season}
+#'   \item{e}{Expected plus minus}
+#' }
+#' @source \url{https://www.nhl.com/stats/}
+"nhl_data_hockey_reference"
