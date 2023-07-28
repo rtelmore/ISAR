@@ -1,7 +1,7 @@
 ## Version 0.1.14
 
 ## Notes:
-* Added new Draftkings data set
+* Added two new Draftkings data set
 * The textbook is still unpublished and is why there is no reference in the description field of DESCRIPTION. We are trying to make the R package available to book reviewers. 
 
 ## R CMD check results
