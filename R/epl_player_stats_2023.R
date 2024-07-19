@@ -1,13 +1,15 @@
-#' 2021-2022 English Premier League Player Statistics
+#' 2022-2023 English Premier League Player Statistics
 #'
-#' A dataset containing individual player statistics for the English Premier League's 2021 - 2022 season
+#' A dataset containing individual player statistics for the English Premier League's 2022 - 2023 season
 #'
-#' @format A data frame with 545 rows and 35 variables:
+#' @format A data frame with 569 rows and 38 variables:
 #' \describe{
+#'   \item{season_end_year}{Calendar year when season ended}
+#'   \item{squad}{Player team}
+#'   \item{comp}{League (Premier League)}
 #'   \item{player}{Player name}
 #'   \item{nation}{Player home country}
 #'   \item{pos}{Player position}
-#'   \item{squad}{Player team}
 #'   \item{age}{Age of player}
 #'   \item{born}{Birth year of player}
 #'   \item{mp}{Matches played}
@@ -39,7 +41,8 @@
 #'   \item{xG_xA_p90}{Expected goals plus assists per ninety minutes}
 #'   \item{non_pen_xG_p90}{Expected goals minus penalty goals per ninety minutes}
 #'   \item{non_pen_xG_xA_p90}{Expected goals plus assists minus penalty goals per ninety minutes}
+#'   \item{url}{URL of player stats on fbref.com}
 #' }
 #'
-#' @source \url{https://fbref.com/en/comps/9/2021-2022/stats/2021-2022-Premier-League-Stats}
-"epl_player_stats_2022"
+#' @source From fbref.com via the worldfootballR package
+"epl_player_stats_2023"
