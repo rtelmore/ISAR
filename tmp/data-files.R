@@ -196,7 +196,6 @@ epl_player_stats_2022 <- epl_player_stats_2022[-1, ] |>
   mutate_if(is_all_numeric, as.numeric)
 usethis::use_data(epl_player_stats_2022, overwrite = T)
 
-
 epl_gk_stats_2022 <- read.csv("tmp/epl-adv-gk.csv", encoding = "UTF-8")
 names(epl_gk_stats_2022) <- epl_gk_stats_2022[1, ]
 epl_gk_stats_2022 <- epl_gk_stats_2022[-1, ] |>
@@ -262,6 +261,159 @@ epl_team_stats <- readxl::read_xlsx("tmp/epl-team-stats.xlsx") |>
   mutate_if(is_all_numeric, as.numeric)
 
 usethis::use_data(epl_team_stats, overwrite = T)
+
+## EPL 2022-23
+library(worldfootballR)
+
+player_stats_2023 <- fb_big5_advanced_season_stats(season_end_year = 2023,
+                                                   stat_type = "standard",
+                                                   team_or_player = "player",
+                                                   time_pause = 3)
+epl_player_stats_2023 <- player_stats_2023 |>
+  filter(Comp == "Premier League") |>
+  janitor::clean_names() |>
+  dplyr::rename(mp = mp_playing,
+                starts = starts_playing,
+                min = min_playing,
+                min_p90 = mins_per_90_playing,
+                goals = gls,
+                assists = ast,
+                goals_assists = g_a,
+                non_pen_goals = g_minus_pk,
+                pen_goals = pk,
+                pen_att = p_katt,
+                yellow_cards = crd_y,
+                red_cards = crd_r,
+                xG = x_g_expected,
+                non_pen_xG = npx_g_expected,
+                xA = x_ag_expected,
+                non_pen_xGxA = npx_g_x_ag_expected,
+                prg_carry = prg_c_progression,
+                prg_pass = prg_p_progression,
+                prg_reception = prg_r_progression,
+                goals_p90 = gls_per,
+                assists_p90 = ast_per,
+                goals_assists_p90 = g_a_per,
+                non_pen_goals_p90 = g_minus_pk_per,
+                non_pen_goals_assists_p90 = g_a_minus_pk_per,
+                xG_p90 = x_g_per,
+                xA_p90 = x_ag_per,
+                xG_xA_p90 = x_g_x_ag_per,
+                non_pen_xG_p90 = npx_g_per,
+                non_pen_xG_xA_p90 = npx_g_x_ag_per)
+
+usethis::use_data(epl_player_stats_2023, overwrite = T)
+
+player_stats_2024 <- fb_big5_advanced_season_stats(season_end_year = 2024,
+                                                   stat_type = "standard",
+                                                   team_or_player = "player",
+                                                   time_pause = 3)
+epl_player_stats_2024 <- player_stats_2023 |>
+  filter(Comp == "Premier League") |>
+  janitor::clean_names() |>
+  dplyr::rename(mp = mp_playing,
+                starts = starts_playing,
+                min = min_playing,
+                min_p90 = mins_per_90_playing,
+                goals = gls,
+                assists = ast,
+                goals_assists = g_a,
+                non_pen_goals = g_minus_pk,
+                pen_goals = pk,
+                pen_att = p_katt,
+                yellow_cards = crd_y,
+                red_cards = crd_r,
+                xG = x_g_expected,
+                non_pen_xG = npx_g_expected,
+                xA = x_ag_expected,
+                non_pen_xGxA = npx_g_x_ag_expected,
+                prg_carry = prg_c_progression,
+                prg_pass = prg_p_progression,
+                prg_reception = prg_r_progression,
+                goals_p90 = gls_per,
+                assists_p90 = ast_per,
+                goals_assists_p90 = g_a_per,
+                non_pen_goals_p90 = g_minus_pk_per,
+                non_pen_goals_assists_p90 = g_a_minus_pk_per,
+                xG_p90 = x_g_per,
+                xA_p90 = x_ag_per,
+                xG_xA_p90 = x_g_x_ag_per,
+                non_pen_xG_p90 = npx_g_per,
+                non_pen_xG_xA_p90 = npx_g_x_ag_per)
+
+usethis::use_data(epl_player_stats_2024, overwrite = T)
+
+gk_stats_2023 <- fb_big5_advanced_season_stats(season_end_year = 2023,
+                                                   stat_type = "keepers_adv",
+                                                   team_or_player = "player",
+                                                   time_pause = 3)
+epl_gk_stats_2023 <- gk_stats_2023 |>
+  filter(Comp == "Premier League") |>
+  janitor::clean_names() |>
+  dplyr::rename(min_p90 = mins_per_90,
+                goals = ga_goals,
+                pk_allowed = pka_goals,
+                free_kick_goals = fk_goals,
+                corner_kick_goals = ck_goals,
+                own_goals_against = og_goals,
+                post_shot_xG = p_sx_g_expected,
+                post_shot_xG_per_shot_on_target = p_sx_g_per_so_t_expected,
+                post_shot_xG_minus_goals = p_sx_g_per_minus_expected,
+                post_shot_xG_minus_goals_p90 = per_90_expected,
+                launch_completed = cmp_launched,
+                launch_attempt = att_launched,
+                launch_completion_percent = cmp_percent_launched,
+                pass_attempt = att_gk_passes,
+                throw_attempt = thr_passes,
+                pass_launch_percent = launch_percent_passes,
+                avg_pass_len = avg_len_passes,
+                goal_kick_attempt = att_goal,
+                gk_launch_percent = launch_percent_goal,
+                avg_gk_len = avg_len_goal,
+                crosses_faced = opp_crosses,
+                crosses_stopped = stp_crosses,
+                stop_percent = stp_percent_crosses,
+                def_actions_out_pen_area = number_opa_sweeper,
+                def_actions_out_pen_area_p90 = number_opa_per_90_sweeper,
+                avg_dist_def_actions = avg_dist_sweeper)
+
+usethis::use_data(epl_gk_stats_2023, overwrite = T)
+
+gk_stats_2024 <- fb_big5_advanced_season_stats(season_end_year = 2024,
+                                               stat_type = "keepers_adv",
+                                               team_or_player = "player",
+                                               time_pause = 3)
+epl_gk_stats_2024 <- gk_stats_2024 |>
+  filter(Comp == "Premier League") |>
+  janitor::clean_names() |>
+  dplyr::rename(min_p90 = mins_per_90,
+                goals = ga_goals,
+                pk_allowed = pka_goals,
+                free_kick_goals = fk_goals,
+                corner_kick_goals = ck_goals,
+                own_goals_against = og_goals,
+                post_shot_xG = p_sx_g_expected,
+                post_shot_xG_per_shot_on_target = p_sx_g_per_so_t_expected,
+                post_shot_xG_minus_goals = p_sx_g_per_minus_expected,
+                post_shot_xG_minus_goals_p90 = per_90_expected,
+                launch_completed = cmp_launched,
+                launch_attempt = att_launched,
+                launch_completion_percent = cmp_percent_launched,
+                pass_attempt = att_gk_passes,
+                throw_attempt = thr_passes,
+                pass_launch_percent = launch_percent_passes,
+                avg_pass_len = avg_len_passes,
+                goal_kick_attempt = att_goal,
+                gk_launch_percent = launch_percent_goal,
+                avg_gk_len = avg_len_goal,
+                crosses_faced = opp_crosses,
+                crosses_stopped = stp_crosses,
+                stop_percent = stp_percent_crosses,
+                def_actions_out_pen_area = number_opa_sweeper,
+                def_actions_out_pen_area_p90 = number_opa_per_90_sweeper,
+                avg_dist_def_actions = avg_dist_sweeper)
+
+usethis::use_data(epl_gk_stats_2024, overwrite = T)
 
 ## WNBA
 
