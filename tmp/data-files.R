@@ -1,6 +1,7 @@
 ## Ryan Elmore
 ## Organizing the Data for Book
 ## 24 Oct 2020
+## Update: 18 Jul 2025
 
 library(janitor)
 library(dplyr)
@@ -40,6 +41,38 @@ nba_ff_team_2023 <- readRDS("~/research/ISAR/tmp/ff-team-2023.rds")
 nba_ff_team_2023[7:14] <- sapply(nba_ff_team_2023[7:14], as.numeric)
 nba_ff_team_2023$min <- as.numeric(substr(nba_ff_team_2023$min, 1, 3))
 usethis::use_data(nba_ff_team_2023, overwrite = T)
+
+## 2024
+nba_games_2024 <- readRDS("tmp/nba-games-end-2024.rds")
+nba_games_2024[9:29] <- sapply(nba_games_2024[9:29], as.numeric)
+nba_games_2024$game_date <- lubridate::ymd(nba_games_2024$game_date)
+usethis::use_data(nba_games_2024, overwrite = T)
+
+nba_adv_team_2024 <- readRDS("tmp/adv-team-2024.rds")
+nba_adv_team_2024[7:29] <- sapply(nba_adv_team_2024[7:29], as.numeric)
+nba_adv_team_2024$min <- as.numeric(substr(nba_adv_team_2024$min, 1, 3))
+usethis::use_data(nba_adv_team_2024, overwrite = T)
+
+nba_ff_team_2024 <- readRDS("tmp/ff-team-2024.rds")
+nba_ff_team_2024[7:14] <- sapply(nba_ff_team_2024[7:14], as.numeric)
+nba_ff_team_2024$min <- as.numeric(substr(nba_ff_team_2024$min, 1, 3))
+usethis::use_data(nba_ff_team_2024, overwrite = T)
+
+## 2025
+nba_games_2025 <- readRDS("tmp/nba-games-end-2025.rds")
+nba_games_2025[9:29] <- sapply(nba_games_2025[9:29], as.numeric)
+nba_games_2025$game_date <- lubridate::ymd(nba_games_2025$game_date)
+usethis::use_data(nba_games_2025, overwrite = T)
+
+nba_adv_team_2025 <- readRDS("tmp/adv-team-2025.rds")
+nba_adv_team_2025[7:29] <- sapply(nba_adv_team_2025[7:29], as.numeric)
+nba_adv_team_2025$min <- as.numeric(substr(nba_adv_team_2025$min, 1, 3))
+usethis::use_data(nba_adv_team_2025, overwrite = T)
+
+nba_ff_team_2025 <- readRDS("tmp/ff-team-2025.rds")
+nba_ff_team_2025[7:14] <- sapply(nba_ff_team_2025[7:14], as.numeric)
+nba_ff_team_2025$min <- as.numeric(substr(nba_ff_team_2025$min, 1, 3))
+usethis::use_data(nba_ff_team_2025, overwrite = T)
 
 ## Draftkings
 dk_lac_dal <- read.csv("~/research/isar-code/data/DKSalaries.csv",
@@ -92,7 +125,7 @@ usethis::use_data(masters)
 
 ## NHL Stuff
 
-team_stats <- nhlapi::nhl_teams_stats(teamIds = NULL, seasons = 2022)
+team_stats <- nhlapi::nhl_teams_stats(teamIds = NULL, seasons = 2024)
 nhl_team_stats_2022 <- purrr::map_df(team_stats$teamStats,
                                      function(x){
                                        return(x[[1]])
@@ -122,8 +155,9 @@ avs_stats_2022 <-  dplyr::inner_join(avs_roster_2022 |>
 
 usethis::use_data(avs_stats_2022, overwrite = T)
 
-years <- 2012:2023
+years <- 2012:2025
 for(i in seq_along(years)){
+  # i <- 14
   cat(sprintf('Year: %s at %s\n', years[i], Sys.time()))
   reg_url <- paste("https://www.hockey-reference.com/leagues/NHL_", years[i],
                    "_skaters.html", sep = "")
@@ -131,7 +165,8 @@ for(i in seq_along(years)){
   nhl_reg_stats <- rvest::html_table(pg, fill = TRUE)[[1]]
   names(nhl_reg_stats) <- nhl_reg_stats[1, ]
   nhl_reg_stats_2 <- janitor::clean_names(nhl_reg_stats) |>
-    filter(rk != "Rk")
+    filter(rk != "Rk") |>
+    select(-rk)
 
   adv_url <- paste("https://www.hockey-reference.com/leagues/NHL_", years[i],
                    "_skaters-advanced.html", sep = "")
@@ -139,11 +174,12 @@ for(i in seq_along(years)){
   nhl_adv_stats <- rvest::html_table(pg_2, fill = TRUE)[[1]]
   names(nhl_adv_stats) <- nhl_adv_stats[1, ]
   nhl_adv_stats_2 <- janitor::clean_names(nhl_adv_stats) |>
-    filter(rk != "Rk")
+    filter(rk != "Rk") |>
+    select(-rk) |>
+    rename(team = tm)
 
   tmp_results <- dplyr::inner_join(nhl_reg_stats_2, nhl_adv_stats_2) |>
-    mutate(season = years[i]) |>
-    select(-rk)
+    mutate(season = years[i])
 
   if(exists("nhl_data")){
     nhl_data <- dplyr::bind_rows(nhl_data, tmp_results)
