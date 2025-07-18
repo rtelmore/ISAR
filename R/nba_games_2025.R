@@ -1,4 +1,4 @@
-#' NBA Game Logs for the 2022-23 Season
+#' NBA Game Logs for the 2024-25 Season
 #'
 #' A dataset containing the NBA Games table on nba.com
 #'
@@ -35,4 +35,4 @@
 #'   \item{video_available}{Logical if game video exists}
 #' }
 #' @source \url{http://asbcllc.com/nbastatR/reference/game_logs.html}
-"nba_games_2023"
+"nba_games_2025"

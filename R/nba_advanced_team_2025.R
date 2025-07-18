@@ -1,4 +1,4 @@
-#' NBA Advanced Statistics (Team) for the 2022-23 Season
+#' NBA Advanced Statistics (Team) for the 2024-25 Season
 #'
 #' A dataset containing the NBA Four Factor table on nba.com
 #'
@@ -35,4 +35,4 @@
 #'   \item{pie}{Player impact estimate}
 #' }
 #' @source \url{http://asbcllc.com/nbastatR/reference/box_scores.html}
-"nba_adv_team_2023"
+"nba_adv_team_2025"

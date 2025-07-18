@@ -1,4 +1,4 @@
-#' NBA Four Factors (Team) for the 2022-23 Season
+#' NBA Four Factors (Team) for the 2024-25 Season
 #'
 #' A dataset containing the NBA Four Factor table on nba.com
 #'
@@ -20,4 +20,4 @@
 #'   \item{opp_oreb_pct}{Offensive rebound percentage of opponent}
 #' }
 #' @source \url{http://asbcllc.com/nbastatR/reference/box_scores.html}
-"nba_ff_team_2023"
+"nba_ff_team_2025"
