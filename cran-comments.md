@@ -1,3 +1,18 @@
+## Version 1.0.0
+
+## Notes:
+* Added three new NBA data sets for 2024
+
+## R CMD check results
+
+0 errors | 0 warnings | 0 note
+
+## Test environments
+* Mac OS Latest (release)
+* Windows Latest (release)
+* Ubuntu Latest (release)
+* Ubuntu Latest (oldrel-1)
+
 ## Version 0.2.1
 
 ## Notes:
