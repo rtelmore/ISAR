@@ -1,6 +1,7 @@
 # ISAR
 R Package for Introduction to Sports Analytics using R by Ryan Elmore and Andrew
-Urbaczewski. The book should be released in 2024. 
+Urbaczewski. The ISBN for this book is ISBN: 978-1-958303-07-8 (paperback) and 
+ISBN: 978-1-958303-06-1 (e-book). 
 
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
@@ -25,4 +26,5 @@ remotes::install_github("rtelmore/ISAR")
 ## Website
 
 The ISAR package website is hosted at [datacolorado.com/r/ISAR](https://datacolorado.com/r/ISAR/).
+You can buy the book at the [Prospect Press website](https://www.prospectpressvt.com/textbooks/elmore-sports-analytics).
 
