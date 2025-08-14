@@ -107,6 +107,17 @@ nwsl_player_stats <- read.csv("../isar-code/data/nwsl-players.csv", header = T,
 #nwsl_player_stats <- readRDS("~/research/isar-code/data/nwsl_player_stats.rds")
 usethis::use_data(nwsl_player_stats, overwrite = T)
 
+nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
+                              encoding = "UTF-8") |>
+  janitor::clean_names() |>
+  dplyr::rename(xGp90 = x_g_1,
+                xAp90 = x_ag_1,
+                xGxAp90 = x_g_x_ag,
+                npxGp90 = npx_g_1,
+                npxGxAp90 = npx_g_x_ag_1)
+#nwsl_player_stats <- readRDS("~/research/isar-code/data/nwsl_player_stats.rds")
+usethis::use_data(nwsl_player_stats_2024, overwrite = T)
+
 ## Golf
 pga_tournaments <- read.csv("~/research/isar-code/data/pga-tourney-level-raw-data.csv",
                             header = TRUE, sep = ",")

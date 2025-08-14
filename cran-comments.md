@@ -1,7 +1,7 @@
 ## Version 1.0.0
 
 ## Notes:
-* Added three new NBA data sets for 2024
+* Added three new NBA data sets for 2025
 
 ## R CMD check results
 
