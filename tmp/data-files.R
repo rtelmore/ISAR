@@ -114,14 +114,14 @@ nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
                 Ap90 = ast_1,
                 GAp90 = g_a_1,
                 npGp90 = g_pk_1,
-                pgGAp90 = g_a_pk,
+                npGAp90 = g_a_pk,
                 xGp90 = x_g_1,
                 xAp90 = x_ag_1,
                 xGxAp90 = x_g_x_ag,
                 npxGp90 = npx_g_1,
                 npxGxAp90 = npx_g_x_ag_1) |>
   select(player, nation, pos, squad, age, mp, starts, min, Gp90, Ap90, GAp90,
-         npGp90, pgGAp90, xGp90, xAp90, xGxAp90, npxGp90, npxGxAp90)
+         npGp90, npGAp90, xGp90, xAp90, xGxAp90, npxGp90, npxGxAp90)
 usethis::use_data(nwsl_player_stats_2024, overwrite = T)
 
 ## Golf
