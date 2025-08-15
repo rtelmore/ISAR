@@ -1,3 +1,19 @@
+## Version 1.0.1
+
+## Notes:
+* Added two new NWSL data sets for 2025
+* Added three new EPL data sets for 2025
+
+## R CMD check results
+
+0 errors | 0 warnings | 0 note
+
+## Test environments
+* Mac OS Latest (release)
+* Windows Latest (release)
+* Ubuntu Latest (release)
+* Ubuntu Latest (oldrel-1)
+
 ## Version 1.0.0
 
 ## Notes:

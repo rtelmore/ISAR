@@ -1,7 +1,7 @@
 Package: ISAR
 Type: Package
 Title: Introduction to Sports Analytics using R (ISAR) Data
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person("Ryan", "Elmore", email = "Ryan.Elmore@du.edu", role = c("cre", "aut")))
 Maintainer: Ryan Elmore <Ryan.Elmore@du.edu>
