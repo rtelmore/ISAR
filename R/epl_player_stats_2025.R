@@ -1,8 +1,8 @@
-#' 2023-2024 English Premier League Player Statistics
+#' 2024-2025 English Premier League Player Statistics
 #'
-#' A dataset containing individual player statistics for the English Premier League's 2023 - 2024 season
+#' A dataset containing individual player statistics for the English Premier League's 2024 - 2025 season
 #'
-#' @format A data frame with 580 rows and 38 variables:
+#' @format A data frame with 574 rows and 38 variables:
 #' \describe{
 #'   \item{season_end_year}{Calendar year when season ended}
 #'   \item{squad}{Player team}
@@ -45,4 +45,4 @@
 #' }
 #'
 #' @source From fbref.com via the worldfootballR package
-"epl_player_stats_2024"
+"epl_player_stats_2025"

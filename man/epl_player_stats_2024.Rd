@@ -5,7 +5,7 @@
 \alias{epl_player_stats_2024}
 \title{2023-2024 English Premier League Player Statistics}
 \format{
-A data frame with 569 rows and 38 variables:
+A data frame with 580 rows and 38 variables:
 \describe{
   \item{season_end_year}{Calendar year when season ended}
   \item{squad}{Player team}

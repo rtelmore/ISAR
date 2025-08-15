@@ -1,0 +1,45 @@
+#' 2024-2025 English Premier League Goalkeeper Statistics
+#'
+#' A dataset containing individual goalkeeper statistics for the English Premier League's 2024 - 2025 season
+#'
+#' @format A data frame with 44 rows and 35 variables:
+#' \describe{
+#'   \item{season_end_year}{Calendar year when season ended}
+#'   \item{squad}{Player team}
+#'   \item{comp}{League (Premier League)}
+#'   \item{player}{Player name}
+#'   \item{nation}{Player home country}
+#'   \item{pos}{Player position}
+#'   \item{age}{Age of player}
+#'   \item{born}{Birth year of player}
+#'   \item{min_p90}{Total minutes played in the season per ninety minutes}
+#'   \item{goals}{Goals scored against player}
+#'   \item{pk_allowed}{Penalty kick goals scored against player}
+#'   \item{free_kick_goals}{Free kick goals scored against player}
+#'   \item{corner_kick_goals}{Corner kick goals scored against player}
+#'   \item{own_goals_against}{Own goals scored against player}
+#'   \item{post_shot_xG}{Post-shot expected goals}
+#'   \item{post_shot_xG_per_shot_on_target}{Post-shot expected goals per shot on target}
+#'   \item{post_shot_xG_minus_goals}{Post-shot expected goals minus goals per shot on target}
+#'   \item{post_shot_xG_minus_goals_p90}{Post-shot expected goals minus goals per shot on target per ninety minutes}
+#'   \item{launch_completed}{Passes longer than 40 yards (launch) completed}
+#'   \item{launch_attempt}{Passes longer than 40 yards attempted}
+#'   \item{launch_completion_percent}{Passes longer than 40 yards (launch) completion percentage}
+#'   \item{pass_attempt}{Passes attempted}
+#'   \item{throw_attempt}{Throws attempted}
+#'   \item{pass_launch_percent}{Percentage of passes launched}
+#'   \item{avg_pass_len}{Average pass length}
+#'   \item{goal_kick_attempt}{Goal kick attempts}
+#'   \item{gk_launch_percent}{Percentage of goals kicks launched}
+#'   \item{avg_gk_len}{Average goal kick length}
+#'   \item{crosses_faced}{Number of crosses faced}
+#'   \item{crosses_stopped}{Number of crosses stopped}
+#'   \item{stop_percent}{Cross stop percentage}
+#'   \item{def_actions_out_pen_area}{Defensive actions outside the penalty area}
+#'   \item{def_actions_out_pen_area_p90}{Defensive actions outside the penalty area per ninety minutes}
+#'   \item{avg_dist_def_actions}{Average distance from goal of defensive actions}
+#'   \item{url}{URL of player stats on fbref.com}
+#' }
+#'
+#' @source From fbref.com via the worldfootballR package
+"epl_gk_stats_2025"

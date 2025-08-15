@@ -1,36 +1,29 @@
-#' 2023-2024 English Premier League Player Statistics
+#' 2024-25 English Premier League Team Statistics
 #'
-#' A dataset containing individual player statistics for the English Premier League's 2023 - 2024 season
+#' A dataset containing team statistics for the English Premier League 2024-25
 #'
-#' @format A data frame with 580 rows and 38 variables:
+#' @format A data frame with 20 rows and 31 variables:
 #' \describe{
 #'   \item{season_end_year}{Calendar year when season ended}
 #'   \item{squad}{Player team}
 #'   \item{comp}{League (Premier League)}
-#'   \item{player}{Player name}
-#'   \item{nation}{Player home country}
-#'   \item{pos}{Player position}
-#'   \item{age}{Age of player}
-#'   \item{born}{Birth year of player}
-#'   \item{mp}{Matches played}
-#'   \item{starts}{Number of matches in which player started the game}
-#'   \item{min}{Total minutes played in the season}
-#'   \item{min_p90}{Total minutes played in the season per ninety minutes}
-#'   \item{goals}{Goals scored by player}
-#'   \item{assists}{Assists by player}
-#'   \item{goals_assists}{Goals scored plus assists by player}
-#'   \item{non_pen_goals}{Non-penalty goals scored by player}
-#'   \item{pen_goals}{Penalty kick goals scored by player}
-#'   \item{pen_att}{Penalty kick attempts by player}
-#'   \item{yellow_cards}{Yellow cards earned by player}
-#'   \item{red_cards}{Red cards earned by player}
+#'   \item{num_players}{Number of players used in the season}
+#'   \item{age}{Age of players weighted by minutes played}
+#'   \item{poss}{Possession as a percentage of passes attempted}
+#'   \item{goals}{Goals scored by team}
+#'   \item{assists}{Assists by team}
+#'   \item{goals_assists}{Goals scored plus assists by team}
+#'   \item{non_pen_goals}{Non-penalty goals scored by team}
+#'   \item{pen_goals}{Penalty kick goals scored by team}
+#'   \item{pen_att}{Penalty kick attempts by team}
+#'   \item{yellow_cards}{Yellow cards earned by team}
+#'   \item{red_cards}{Red cards earned by team}
 #'   \item{xG}{Expected goals}
 #'   \item{non_pen_xG}{Non-penalty kick expected goals}
 #'   \item{xA}{Expected assists}
 #'   \item{non_pen_xGxA}{Non-penalty kick expected goals and assists}
 #'   \item{prg_carry}{Progressive carries}
 #'   \item{prg_pass}{Progressive passes}
-#'   \item{prg_reception}{Progressive passes received}
 #'   \item{goals_p90}{Goals per ninety minutes}
 #'   \item{assists_p90}{Assists per ninety minutes}
 #'   \item{goals_assists_p90}{Goals and assists per ninety minutes}
@@ -45,4 +38,4 @@
 #' }
 #'
 #' @source From fbref.com via the worldfootballR package
-"epl_player_stats_2024"
+"epl_team_stats_2025"
