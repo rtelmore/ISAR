@@ -107,7 +107,7 @@ nwsl_player_stats <- read.csv("../isar-code/data/nwsl-players.csv", header = T,
 #nwsl_player_stats <- readRDS("~/research/isar-code/data/nwsl_player_stats.rds")
 usethis::use_data(nwsl_player_stats, overwrite = T)
 
-nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
+nwsl_player_stats_2023 <- read.csv("tmp/nwsl_2023.csv", header = T,
                               encoding = "UTF-8") |>
   janitor::clean_names() |>
   dplyr::rename(Gp90 = gls_1,
@@ -120,6 +120,25 @@ nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
                 xGxAp90 = x_g_x_ag,
                 npxGp90 = npx_g_1,
                 npxGxAp90 = npx_g_x_ag_1) |>
+  mutate(min = as.numeric(gsub(",", "", min))) |>
+  select(player, nation, pos, squad, age, mp, starts, min, Gp90, Ap90, GAp90,
+         npGp90, npGAp90, xGp90, xAp90, xGxAp90, npxGp90, npxGxAp90)
+usethis::use_data(nwsl_player_stats_2023, overwrite = T)
+
+nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
+                                   encoding = "UTF-8") |>
+  janitor::clean_names() |>
+  dplyr::rename(Gp90 = gls_1,
+                Ap90 = ast_1,
+                GAp90 = g_a_1,
+                npGp90 = g_pk_1,
+                npGAp90 = g_a_pk,
+                xGp90 = x_g_1,
+                xAp90 = x_ag_1,
+                xGxAp90 = x_g_x_ag,
+                npxGp90 = npx_g_1,
+                npxGxAp90 = npx_g_x_ag_1) |>
+  mutate(min = as.numeric(gsub(",", "", min))) |>
   select(player, nation, pos, squad, age, mp, starts, min, Gp90, Ap90, GAp90,
          npGp90, npGAp90, xGp90, xAp90, xGxAp90, npxGp90, npxGxAp90)
 usethis::use_data(nwsl_player_stats_2024, overwrite = T)
