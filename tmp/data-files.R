@@ -107,7 +107,7 @@ nwsl_player_stats <- read.csv("../isar-code/data/nwsl-players.csv", header = T,
 #nwsl_player_stats <- readRDS("~/research/isar-code/data/nwsl_player_stats.rds")
 usethis::use_data(nwsl_player_stats, overwrite = T)
 
-nwsl_player_stats_2023 <- read.csv("tmp/nwsl_2023.csv", header = T,
+nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
                               encoding = "UTF-8") |>
   janitor::clean_names() |>
   dplyr::rename(Gp90 = gls_1,
@@ -120,25 +120,6 @@ nwsl_player_stats_2023 <- read.csv("tmp/nwsl_2023.csv", header = T,
                 xGxAp90 = x_g_x_ag,
                 npxGp90 = npx_g_1,
                 npxGxAp90 = npx_g_x_ag_1) |>
-  mutate(min = as.numeric(gsub(",", "", min))) |>
-  select(player, nation, pos, squad, age, mp, starts, min, Gp90, Ap90, GAp90,
-         npGp90, npGAp90, xGp90, xAp90, xGxAp90, npxGp90, npxGxAp90)
-usethis::use_data(nwsl_player_stats_2023, overwrite = T)
-
-nwsl_player_stats_2024 <- read.csv("tmp/nwsl_2024.csv", header = T,
-                                   encoding = "UTF-8") |>
-  janitor::clean_names() |>
-  dplyr::rename(Gp90 = gls_1,
-                Ap90 = ast_1,
-                GAp90 = g_a_1,
-                npGp90 = g_pk_1,
-                npGAp90 = g_a_pk,
-                xGp90 = x_g_1,
-                xAp90 = x_ag_1,
-                xGxAp90 = x_g_x_ag,
-                npxGp90 = npx_g_1,
-                npxGxAp90 = npx_g_x_ag_1) |>
-  mutate(min = as.numeric(gsub(",", "", min))) |>
   select(player, nation, pos, squad, age, mp, starts, min, Gp90, Ap90, GAp90,
          npGp90, npGAp90, xGp90, xAp90, xGxAp90, npxGp90, npxGxAp90)
 usethis::use_data(nwsl_player_stats_2024, overwrite = T)
@@ -563,21 +544,56 @@ usethis::use_data(epl_team_stats_2024, overwrite = T)
 
 ## WNBA
 
-df <- wehoop::load_wnba_pbp(2021) |>
+pbp <- wehoop::load_wnba_pbp(2024)
+wnba_seattle_pbp_2024 <- pbp |>
   dplyr::filter((home_team_name == "Seattle" |
                    away_team_name == "Seattle"),
                 shooting_play == "TRUE",
                 !grepl("Free", type_text),
-                coordinate_y < 45)
+                coordinate_y < 45) |>
+  select(coordinate_x, coordinate_y, scoring_play)
 
-df_player <- wehoop::load_wnba_player_box(2021) |>
-  dplyr::filter(team_short_display_name == "Storm") |>
-  dplyr::select(athlete_display_name, athlete_id, team_short_display_name) |>
-  dplyr::distinct()
+usethis::use_data(wnba_seattle_pbp_2024, overwrite = T)
 
-df_game <- df |>
-  dplyr::filter((home_team_name == "Seattle" |
-                   away_team_name == "Seattle"),
-                shooting_play == "TRUE",
-                !grepl("Free", type_text),
-                coordinate_y < 45)
+# p <- geom_basketball(league = "WNBA",
+#                      display_range = "defense",
+#                      color_updates = list(
+#                        defensive_half_court = "white",
+#                        offensive_half_court = "white",
+#                        court_apron = "white",
+#                        center_circle_fill = "white",
+#                        two_point_range = "white",
+#                        painted_area = "white",
+#                        free_throw_circle_fill = "white",
+#                        basket_ring = "black"))
+# p + geom_point(data = wnba_seattle_pbp_2025,
+#                aes(x = coordinate_x, y = coordinate_y,
+#                    col = as.factor(scoring_play)),
+#                alpha = .15) +
+#   labs(title = "2024 Seattle Storm shot chart",
+#        color = "Made Shot?") +
+#   scale_color_brewer(palette = "Set1")
+
+box <- wehoop::load_wnba_player_box(2024)
+pbp <- wehoop::load_wnba_pbp(2024)
+
+df_player <- box |>
+  filter(athlete_display_name %in% c("Breanna Stewart", "A'ja Wilson"),
+         team_short_display_name %in% c("Aces", "Liberty")) |>
+  select(athlete_display_name, athlete_id, team_short_display_name) |>
+  distinct()
+
+wnba_player_shots_2024 <- left_join(df_player,
+                                    pbp,
+                                    by = c("athlete_id" = "athlete_id_1")) |>
+  select(athlete_display_name, coordinate_x, coordinate_y)
+
+usethis::use_data(wnba_player_shots_2024, overwrite = T)
+
+# p + geom_point(data = wnba_player_shots_2024,
+#                aes(x = coordinate_x, y = coordinate_y),
+#                alpha = .15) +
+#   facet_wrap(~ athlete_display_name, ncol = 2) +
+#   labs(caption = "",
+#        title = "Shot charts for Breanna Stewart and Sue Bird in 2022") +
+#   theme(legend.position = "bottom")
