@@ -12,6 +12,8 @@ library(purrr)
 library(readxl)
 library(wehoop)
 library(rvest)
+library(hoopR)
+library(purrr)
 
 is_all_numeric <- function(x) {
   !any(is.na(suppressWarnings(as.numeric(na.omit(x))))) & is.character(x)
@@ -597,3 +599,59 @@ usethis::use_data(wnba_player_shots_2024, overwrite = T)
 #   labs(caption = "",
 #        title = "Shot charts for Breanna Stewart and Sue Bird in 2022") +
 #   theme(legend.position = "bottom")
+
+## Nuggets Shots
+
+season <- "2024-25"
+
+teams <- nba_teams()
+
+team_ids <- teams |>
+  pull(team_id)
+
+# Function to safely get shot data
+get_team_shots <- function(team_id, season) {
+  tryCatch({
+    message(paste("Getting shots for team", team_id))
+    result <- nba_shotchartdetail(
+      season = season,
+      player_id = 0,
+      team_id = team_id,
+      season_type = "Regular Season"
+    )
+    Sys.sleep(1)  # Rate limiting
+
+    # Extract the appropriate data frame
+    if (!is.null(result)) {
+      if ("Shot_Chart_Detail" %in% names(result)) {
+        return(result$Shot_Chart_Detail)
+      } else if (is.list(result) && length(result) > 0) {
+        return(result[[1]])
+      }
+    }
+    return(NULL)
+  }, error = function(e) {
+    message(paste("Error with team", team_id, ":", e$message))
+    return(NULL)
+  })
+}
+
+all_shots <- map_dfr(team_ids, ~get_team_shots(.x, season))
+
+nba_nuggets_shots <- readRDS("tmp/nuggets-2015-23.rds")
+
+nba_nuggets_shots_2025 <- readRDS("../nba-points-above/shiny/WNBA_NBA_Shot_Analysis/01_nba_all_shots_combined_2015-25.rds") |>
+  filter(TEAM_NAME == "Denver Nuggets")
+
+nba_nuggets_shots_2025 <- nba_nuggets_shots_2025 |>
+  rename(locationX = LOC_X,
+         locationY = LOC_Y,
+         zoneBasic = SHOT_ZONE_BASIC,
+         namePlayer = PLAYER_NAME,
+         nameTeam = TEAM_NAME) |>
+  mutate(isShotMade = ifelse(SHOT_MADE_FLAG == "1", TRUE, FALSE))
+
+nba_nuggets_shots_2025 <- nba_nuggets_shots_2025 |>
+  janitor::clean_names("lower_camel")
+
+usethis::use_data(nba_nuggets_shots_2025, overwrite = T)
