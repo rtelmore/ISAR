@@ -1,3 +1,20 @@
+## Version 1.0.4
+
+## Notes:
+* Added Masters data for 2025
+
+## R CMD check results
+
+0 errors | 0 warnings | 1 notes *
+
+(The note: unable to verify current time)
+
+## Test environments
+* Mac OS Latest (release)
+* Windows Latest (release)
+* Ubuntu Latest (release)
+* Ubuntu Latest (oldrel-1)
+
 ## Version 1.0.3
 
 ## Notes:

@@ -7,7 +7,7 @@ library(janitor)
 library(dplyr)
 #remotes::install_github(repo = "saiemgilani/hoopR")
 library(hoopR)
-library(nhlapi)
+#library(nhlapi)
 library(purrr)
 library(readxl)
 library(wehoop)
@@ -142,6 +142,12 @@ masters <- readxl::read_xlsx("tmp/2019-Masters.xlsx") %>%
 masters <- as.data.frame(masters)
 usethis::use_data(masters)
 
+masters_2025 <- read.csv("tmp/Masters2025.csv") |>
+  janitor::clean_names() |>
+  dplyr::select(pos, player_name, nationality, score, round_1, round_2,
+                round_3, round_4, total) |>
+  as.data.frame()
+usethis::use_data(masters_2025)
 ## NHL Stuff
 
 team_stats <- nhlapi::nhl_teams_stats(teamIds = NULL, seasons = 2024)
