@@ -96,6 +96,16 @@ dk_edm_col <- read.csv("~/research/isar-code/data/DKSalaries-EDM-COL.csv",
   janitor::clean_names()
 usethis::use_data(dk_edm_col, overwrite = T)
 
+dk_nyr_car <- read.csv("~/research/isar-code/data/DKSalaries-NYR-CAR.csv",
+                       stringsAsFactors = F) |>
+  janitor::clean_names()
+usethis::use_data(dk_nyr_car, overwrite = T)
+
+dk_bos_buf <- read.csv("tmp/DKSalaries-BOS-BUF.csv",
+                       stringsAsFactors = F) |>
+  janitor::clean_names()
+usethis::use_data(dk_bos_buf, overwrite = T)
+
 ## NWSL
 nwsl_player_stats <- read.csv("../isar-code/data/nwsl-players.csv", header = T,
                               encoding = "UTF-8") |>

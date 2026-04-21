@@ -1,9 +1,9 @@
-#' Draftkings Showdown Game in NHL (Edmonton Oilers versus Colorado Avalanche)
+#' Draftkings Showdown Game in NHL (Boston Bruins at Buffalo Sabres, April 21, 2026)
 #'
-#' A dataset containing the Draftkings salary information for Game 1 of the
-#'  2022 NHL Playoffs between the Edmonton Oilers versus Colorado Avalanche.
+#' A dataset containing the Draftkings salary information for Game 2 of the
+#'  2026 NHL Playoffs between the Boston Bruins and Buffalo Sabres (round 1).
 #'
-#' @format A data frame with 252 rows and 9 variables:
+#' @format A data frame with 128 rows and 9 variables:
 #' \describe{
 #'   \item{position}{real-life roster position of the player}
 #'   \item{name_id}{player name and Draftkings ID}
@@ -16,4 +16,4 @@
 #'   \item{avg_points_per_game}{player average Draftkings points per game}
 #' }
 #' @source Draftkings Contest Page
-"dk_edm_col"
+"dk_bos_buf"

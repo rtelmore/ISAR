@@ -1,3 +1,18 @@
+## Version 1.0.5
+
+## Notes:
+* Added Bruins vs Sabres DK data
+
+## R CMD check results
+
+0 errors | 0 warnings | 0 notes
+
+## Test environments
+* Mac OS Latest (release)
+* Windows Latest (release)
+* Ubuntu Latest (release)
+* Ubuntu Latest (oldrel-1)
+
 ## Version 1.0.4
 
 ## Notes:
